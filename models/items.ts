@@ -6,7 +6,7 @@ const TABLE_NAME: typeof TABLES = TABLES.items
 /**
  * Item interface
  */
-interface ItemProps extends DB_Entry {
+export interface ItemProps extends DB_Entry {
   name: string,
   price: number
 }
@@ -18,6 +18,16 @@ interface ItemProps extends DB_Entry {
  */
 const getItems = async (): Promise<Array<ItemProps>> => {
   return getEntries(TABLE_NAME)
+}
+
+/**
+ * Get item by name.
+ *
+ * @param name
+ * @return ItemProps
+ */
+const getItemByName = async (name: string): Promise<ItemProps> => {
+  return await findEntry(TABLE_NAME, 'name', name)
 }
 
 /**
@@ -39,8 +49,13 @@ const storeItem = async (item: ItemProps): Promise<ItemProps> => {
  * @return number
  */
 const deleteItemByName = async (name: string): Promise<number> => {
-  const entry = await findEntry(TABLE_NAME, 'name', name)
-  return await deleteItemById(entry.id)
+  const entry = await getItemByName(name)
+
+  if (entry) {
+    return await deleteItemById((entry as any)['id'])
+  }
+
+  return 0
 }
 
 /**
@@ -56,6 +71,7 @@ const deleteItemById = async  (id: number): Promise<number> => {
 
 module.exports = {
   getItems,
+  getItemByName,
   storeItem,
   deleteItemByName,
   deleteItemById

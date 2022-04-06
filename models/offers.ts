@@ -5,7 +5,7 @@ const TABLE_NAME: typeof TABLES = TABLES.offers
 /**
  * Item interface
  */
-interface OfferProps extends DB_Entry {
+export interface OfferProps extends DB_Entry {
   itemId: number,
   size: number,
   specialPrice: number

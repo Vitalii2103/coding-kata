@@ -1,3 +1,7 @@
+# ======================
+# STATUS: IN PROGRESS...
+# ======================
+
 # Coding Kata
 
 All technical interviews taken with _Strandkorb Jetzt_ will be performed in the same manner, in order to minimise variance in the recruitment process. This should ensure the interview process is fair to the candidates, and also that _Strandkorb Jetzt_ do not miss opportunities to hire good candidates.

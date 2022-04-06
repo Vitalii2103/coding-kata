@@ -1,9 +1,11 @@
 import { ItemProps } from "../../models/items"
 import { OfferProps } from "../../models/offers"
+import { CalculatorResult } from "./calculator"
 const { getItemByName } = require('../../models/items')
 const { getItemOffers } = require('../../models/offers')
+const Calculator = require('./calculator')
 
-interface ShoppingCartEntry {
+export interface ShoppingCartEntry {
   item: ItemProps,
   offers: Array<OfferProps>,
   size: number
@@ -58,6 +60,10 @@ class ShoppingCart {
   async deletePosition(name: string): Promise<boolean> {
     this.entries = this.entries.filter(entry => (entry as any)['name'] !== name)
     return !this.findEntry(name)
+  }
+
+  calculate(): CalculatorResult {
+    return Calculator(this.entries)
   }
 }
 

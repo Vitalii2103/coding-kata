@@ -4,7 +4,7 @@
   "description": "All technical interviews taken with _Strandkorb Jetzt_ will be performed in the same manner, in order to minimise variance in the recruitment process. This should ensure the interview process is fair to the candidates, and also that _Strandkorb Jetzt_ do not miss opportunities to hire good candidates.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,10 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3"

@@ -24,7 +24,7 @@ const getItems = async (): Promise<Array<ItemProps>> => {
  * Get item by name.
  *
  * @param name
- * @return ItemProps
+ * @return ItemProps|null
  */
 const getItemByName = async (name: string): Promise<ItemProps> => {
   return await findEntry(TABLE_NAME, 'name', name)

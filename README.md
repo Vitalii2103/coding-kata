@@ -1,6 +1,7 @@
-# ======================
-# STATUS: IN PROGRESS...
-# ======================
+# ============
+# STATUS: DONE
+# Branch: feature/supermarket_checkout
+# ============
 
 # Coding Kata
 

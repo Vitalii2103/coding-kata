@@ -1,0 +1,25 @@
+{
+  "name": "coding-kata",
+  "version": "1.0.0",
+  "description": "All technical interviews taken with _Strandkorb Jetzt_ will be performed in the same manner, in order to minimise variance in the recruitment process. This should ensure the interview process is fair to the candidates, and also that _Strandkorb Jetzt_ do not miss opportunities to hire good candidates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitalii2103/coding-kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitalii2103/coding-kata/issues"
+  },
+  "homepage": "https://github.com/Vitalii2103/coding-kata#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
